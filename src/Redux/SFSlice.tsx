@@ -1,21 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+// import { createSlice } from '@reduxjs/toolkit'
+// import type { PayloadAction } from '@reduxjs/toolkit'
 
 
 
-const initialState = {
+// const initialState = {
     
-}
+// }
 
-export const counterSlice = createSlice({
-    name: 'songfestival',
-    initialState,
-    reducers: {
+// export const counterSlice = createSlice({
+//     name: 'songfestival',
+//     initialState,
+//     reducers: {
 
-    },
-})
+//     },
+// })
 
-// Action creators are generated for each case reducer function
-export const { } = counterSlice.actions
+// // Action creators are generated for each case reducer function
+// export const { } = counterSlice.actions
 
-export default counterSlice.reducer
+// export default counterSlice.reducer
