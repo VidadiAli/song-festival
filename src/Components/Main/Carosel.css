@@ -1,0 +1,166 @@
+.carosel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.carosel>.carosel-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carosel>.carosel-content::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 100000;
+    pointer-events: none;
+    transition: background-color 0.5s, backdrop-filter 0.5s;
+}
+
+.slice-active::after {
+    animation: slice 0.5s;
+}
+
+@keyframes slice {
+    0% {
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+}
+
+.carosel>.carosel-content>.carosel-image-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.carosel>.carosel-content>.carosel-image-back::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carosel>.carosel-content>.carosel-image-back>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carosel>.carosel-content>.carosel-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    width: 80%;
+    color: white;
+}
+
+.carosel>.carosel-content>.carosel-content-text>p {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.carosel>.carosel-content>.carosel-content-text>button {
+    width: max-content;
+    padding: 10px 20px;
+    background-image: linear-gradient(30deg, var(--firstColor), var(--secondColor));
+    color: white;
+    border-radius: 4px;
+}
+
+.carosel>.carosel-content>.carosel-content-text>.cct-ending {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carosel>.carosel-content>.carosel-content-text>.cct-ending>span:nth-child(1) {
+    color: rgb(162, 162, 162);
+    font-weight: 540;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.carosel>.carosel-content>.carosel-content-right {
+    width: 15%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    border-left: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.carosel>.carosel-content>.carosel-content-right>div {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.carosel>.carosel-content>.carosel-content-right>.right-circle-slice::after {
+    content: '';
+    animation: border-line;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+}
+
+@keyframes border-line {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.carosel>.carosel-content>.carosel-content-right>div>img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
+    width: 50px;
+    height: 50px;
+    transform: translateX(30px);
+}
