@@ -67,19 +67,11 @@ div {
     .news>.news-content>div {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-    .news>.news-content>div>.news-count {
-        font-size: 1.8rem;
-    }
 }
 
 @media (max-width: 992px) {
     .news>.news-content>div {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .news>.news-content>div>.news-count {
-        font-size: 1.5rem;
     }
 
     .news>.news-content>div>h5,
@@ -100,15 +92,7 @@ div {
     .news>.news-content {
         padding: 15px;
         gap: 15px;
-    }
-
-    .news>.news-content>div>.news-count {
-        font-size: 1.2rem;
-    }
-
-    .news>.news-content>div>h5,
-    div {
-        font-size: 0.8rem;
+        align-items: center;
     }
 }
 
@@ -131,11 +115,11 @@ div {
     }
 
     .news>.news-content>div>.news-count {
-        font-size: 1rem;
+        font-size: 2.5rem;
     }
 
     .news>.news-content>div>h5,
     div {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 }
