@@ -104,24 +104,33 @@ export interface menuType {
 export const news: newsType[] = [
     {
         id: 1,
-        newsTitle: "Host City: Basel or Ginevra",
-        newsCover: "https://eurovision.tv/sites/default/files/styles/banner/public/media/image/2024-07/2024-07-19_e_Finalst%C3%A4dte%20ESC_%C2%A9Getty%20Images_Sergey%20Novikov.jpg?itok=pivCEbZi",
-        newsDate: "21.07.2024",
-        newsAuthor: "Edward",
-        newsContent: "Those are our two options now that the Swiss broadcaster has whittled down the initial batch of bids to a final two. One of these two cities will host the Eurovision Song Contest in Switzerland in May 2025. The final decision will be made in late August."
+        newsTitle: "Junior Eurovision 2024: All about the Grand Final",
+        newsCover: "https://eurovision.tv/sites/default/files/media/image/2023-08/ESC-HEART-SPAIN-WHITE.png",
+        newsDate: "09.05.2024",
+        newsAuthor: "Lena",
+        newsContent: `The 68th edition of the Eurovision Song Contest culminates tonight. 25 songs will be performed, and after 4 hours of music, performances, entertainment and excitement, we'll know the winner of the Eurovision Song Contest 2024.
+The show starts at 21:00 CEST, broadcast live from Malmö Arena in the south of Sweden, and can be streamed on YouTube. The hosts are Petra Mede and Malin Åkerman. The running order has been decided by Swedish broadcaster SVT based on an allocation draw.`
     },
     {
         id: 2,
-        newsTitle: "EBU identifies three focus areas for Eurovision following 2024 issues",
-        newsCover: "https://pix.eurovisionworld.com/pix/ebu-headquarter.jpg",
-        newsDate: "01.07.2024",
-        newsAuthor: "Edward",
-        newsContent: `This year's contest in Malmö was filled with hate, accusations between delegations, and the disqualification of the Netherland's artist Joost Klein on the day of the Grand Final.
-After the contest, the European Broadcasting Union (EBU) announced an "independent review" of the problematic issues of the contest. The taskforce was led by Pernille Gaardbo, Executive Producer of Eurovision 2014.
-The independent review gathered feedback from Heads of Delegations, members of the ESC Reference Group, the Contest’s governing board, and the EBU/ESC core team. No artists, fans or media were heard.`
+        newsTitle: "Eurovision 2024: All about the Grand Final",
+        newsCover: "https://pix.eurovisionworld.com/pix/eurovision-2024-final-artists-1.jpg",
+        newsDate: "09.05.2024",
+        newsAuthor: "Lena",
+        newsContent: `The 68th edition of the Eurovision Song Contest culminates tonight. 25 songs will be performed, and after 4 hours of music, performances, entertainment and excitement, we'll know the winner of the Eurovision Song Contest 2024.
+The show starts at 21:00 CEST, broadcast live from Malmö Arena in the south of Sweden, and can be streamed on YouTube. The hosts are Petra Mede and Malin Åkerman. The running order has been decided by Swedish broadcaster SVT based on an allocation draw.`
     },
     {
         id: 3,
+        newsTitle: "Joost Klein from the Netherlands disqualified from Eurovision 2024",
+        newsCover: "https://pix.eurovisionworld.com/pix/netherlands-2024-joost-klein-4.jpg",
+        newsDate: "10.05.2024",
+        newsAuthor: "Lena",
+        newsContent: `Netherlands' artist Joost Klein, 26, and his song "Europapa," have been disqualified from the Eurovision Song Contest 2024.
+The European Broadcasting Union (EBU) has issued a statement:`
+    },
+    {
+        id: 4,
         newsTitle: "Nemo from Switzerland wins the Eurovision Song Contest 2024",
         newsCover: "https://pix.eurovisionworld.com/pix/switzerland-2024-nemo-6.jpg",
         newsDate: "11.05.2024",
@@ -131,23 +140,23 @@ After 4 hours of music, performances, entertainment and excitement, Nemo from Sw
 Nemo received a total of 591 points (365 points from the national juries and 226 from the public viewers).`
     },
     {
-        id: 4,
-        newsTitle: "Joost Klein from the Netherlands disqualified from Eurovision 2024",
-        newsCover: "https://pix.eurovisionworld.com/pix/netherlands-2024-joost-klein-4.jpg",
-        newsDate: "10.05.2024",
-        newsAuthor: "Lena",
-        newsContent: `Netherlands' artist Joost Klein, 26, and his song "Europapa," have been disqualified from the Eurovision Song Contest 2024.
-The European Broadcasting Union (EBU) has issued a statement:`
+        id: 5,
+        newsTitle: "EBU identifies three focus areas for Eurovision following 2024 issues",
+        newsCover: "https://pix.eurovisionworld.com/pix/ebu-headquarter.jpg",
+        newsDate: "01.07.2024",
+        newsAuthor: "Edward",
+        newsContent: `This year's contest in Malmö was filled with hate, accusations between delegations, and the disqualification of the Netherland's artist Joost Klein on the day of the Grand Final.
+After the contest, the European Broadcasting Union (EBU) announced an "independent review" of the problematic issues of the contest. The taskforce was led by Pernille Gaardbo, Executive Producer of Eurovision 2014.
+The independent review gathered feedback from Heads of Delegations, members of the ESC Reference Group, the Contest’s governing board, and the EBU/ESC core team. No artists, fans or media were heard.`
     },
     {
-        id: 5,
-        newsTitle: "Eurovision 2024: All about the Grand Final",
-        newsCover: "https://pix.eurovisionworld.com/pix/eurovision-2024-final-artists-1.jpg",
-        newsDate: "09.05.2024",
-        newsAuthor: "Lena",
-        newsContent: `The 68th edition of the Eurovision Song Contest culminates tonight. 25 songs will be performed, and after 4 hours of music, performances, entertainment and excitement, we'll know the winner of the Eurovision Song Contest 2024.
-The show starts at 21:00 CEST, broadcast live from Malmö Arena in the south of Sweden, and can be streamed on YouTube. The hosts are Petra Mede and Malin Åkerman. The running order has been decided by Swedish broadcaster SVT based on an allocation draw.`
-    }
+        id: 6,
+        newsTitle: "Host City: Basel or Ginevra",
+        newsCover: "https://eurovision.tv/sites/default/files/styles/banner/public/media/image/2024-07/2024-07-19_e_Finalst%C3%A4dte%20ESC_%C2%A9Getty%20Images_Sergey%20Novikov.jpg?itok=pivCEbZi",
+        newsDate: "21.07.2024",
+        newsAuthor: "Edward",
+        newsContent: "Those are our two options now that the Swiss broadcaster has whittled down the initial batch of bids to a final two. One of these two cities will host the Eurovision Song Contest in Switzerland in May 2025. The final decision will be made in late August."
+    },
 ]
 
 export interface newsType {

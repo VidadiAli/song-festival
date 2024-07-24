@@ -81,6 +81,7 @@
     height: 60px;
     overflow: hidden;
     text-align: justify;
+    font-size: 1rem;
 }
 
 .carosel>.carosel-content>.carosel-content-text>button {
@@ -94,6 +95,7 @@
 .carosel>.carosel-content>.carosel-content-text>.cct-ending {
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
 }
 
 .carosel>.carosel-content>.carosel-content-text>.cct-ending>span:nth-child(1) {
@@ -158,9 +160,88 @@
     border-radius: 50%;
 }
 
-
 .carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
     width: 50px;
     height: 50px;
     transform: translateX(30px);
+}
+
+@media screen and (max-width: 1200px) {
+    .carosel>.carosel-content {
+        height: 55vh;
+    }
+
+    .carosel>.carosel-content>.carosel-content-text>p {
+        font-size: 0.9rem;
+        height: 50px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-text>button {
+        padding: 8px 16px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div {
+        width: 90px;
+        height: 90px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carosel>.carosel-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carosel>.carosel-content>.carosel-content-text {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        padding: 15px 0;
+        justify-content: center;
+        border: none;
+        border-top: 1px solid white;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
+        width: 35px;
+        height: 35px;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carosel>.carosel-content>.carosel-content-text>p {
+        font-size: 0.8rem;
+        height: 45px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-text>button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
+        width: 25px;
+        height: 25px;
+    }
 }

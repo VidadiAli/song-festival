@@ -3,14 +3,16 @@ import { NavLink } from 'react-router-dom';
 import { HiMiniChevronDown } from "react-icons/hi2";
 import NavbarFirst from './NavbarFirst';
 
+interface toggleTip {
+    toggle: boolean
+}
 
-
-const NavbarMenu = () => {
+const NavbarMenu = ({ toggle }: toggleTip) => {
 
     let menuElement: string[] = [];
 
     return (
-        <ul>
+        <ul className={`${toggle ? 'toggle-active' : ''}`}>
             {
                 menu.map((e: menuType) => {
                     if (!menuElement.includes(e.name)) {
@@ -20,7 +22,7 @@ const NavbarMenu = () => {
                                 e.firstElementName !== '' ?
                                     <>
                                         <NavLink to={''}>
-                                            {e.name} <HiMiniChevronDown className='chrow-down'/>
+                                            {e.name} <HiMiniChevronDown className='chrow-down' />
                                         </NavLink>
                                         <NavbarFirst elementName={e} />
                                     </>

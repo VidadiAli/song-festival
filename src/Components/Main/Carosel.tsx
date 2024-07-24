@@ -15,7 +15,11 @@ const Carosel = () => {
     const [newsAuthor, setNewsAuthor] = useState<string>('');
 
     useEffect(() => {
-        const filteredImages = news.reverse();
+        let filteredImages = [];
+        for (let i = 0; i < 5; i++) {
+            filteredImages.push(news.reverse()[i])
+            console.log(news.reverse()[i])
+        }
         setImageArray(filteredImages);
         if (filteredImages.length > 0) {
             updateCarosel(filteredImages, 0); // İlk render zamanı imageArray və imageCounter-i birbaşa yeniləyirik
