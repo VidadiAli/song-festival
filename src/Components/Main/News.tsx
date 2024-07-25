@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { news, newsType } from '../../data/data';
 import './News.css';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const News = () => {
     const newsContentRef = useRef<HTMLDivElement | null>(null);
@@ -74,11 +75,19 @@ const News = () => {
         return () => clearInterval(newsCarouselInterval);
     }, [itemsToShow]);
 
+
+    const navigate = useNavigate();
+
+    const callNavigate = (navigateUrl: string) => {
+        navigate(`/song-festival/${navigateUrl}`);
+    }
+
+
     return (
         <div className='content-width news'>
             <div className='news-head'>
                 <h3>All News</h3>
-                <button>Read More...</button>
+                <NavLink to={'/song-festival/all-news'}>Read More...</NavLink>
             </div>
             <div className='news-content' ref={newsContentRef}>
                 {
@@ -90,7 +99,7 @@ const News = () => {
                                 ref={(el) => newsBoxRefs.current[index] = el}
                             >
                                 <span className='news-count'>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
-                                <h5>{e.newsTitle}</h5>
+                                <h5 onClick={() => callNavigate(e.newsTitle.split(' ').join('-'))}>{e.newsTitle}</h5>
                                 <div>
                                     <span>by {e.newsAuthor}</span>
                                     <span>{e.newsDate}</span>

@@ -219,7 +219,7 @@ export const team: teamType[] = [
     }
 ]
 
-interface teamType {
+export interface teamType {
     id: number,
     name: string,
     cover: string,

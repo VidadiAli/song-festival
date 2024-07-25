@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { news, newsType } from "../../data/data";
 import './Carosel.css';
+import { useNavigate } from "react-router-dom";
 
 const Carosel = () => {
     const [imageUrl, setImageUrl] = useState<string>('');
@@ -13,6 +14,8 @@ const Carosel = () => {
 
     const [newsDate, setNewsDate] = useState<string>('');
     const [newsAuthor, setNewsAuthor] = useState<string>('');
+
+    const [forNavigate, setForNavigate] = useState<string>('');
 
     useEffect(() => {
         let filteredImages = [];
@@ -29,6 +32,8 @@ const Carosel = () => {
     const updateCarosel = (imageArray: newsType[], imageCounter: number) => {
         const currentNews = imageArray[imageCounter];
         const nextNews = imageArray[(imageCounter + 1) % imageArray.length];
+
+        setForNavigate(currentNews.newsTitle.split(' ').join('-'))
 
         setImageUrl(currentNews.newsCover);
         setSecondImageUrl(nextNews.newsCover);
@@ -92,6 +97,15 @@ const Carosel = () => {
         return () => window.removeEventListener('focus', handleFocus);
     }, []);
 
+
+
+    const navigate = useNavigate();
+
+    const callNavigate = (navigateUrl: string) => {
+        navigate(`/song-festival/${navigateUrl}`);
+        console.log(navigateUrl)
+    }
+
     return (
         <div className="content-width carosel">
             <h3 style={{ paddingTop: '30px' }}>Last News</h3>
@@ -100,7 +114,7 @@ const Carosel = () => {
                 <div className="carosel-content-text">
                     <h1>{newsTitle}</h1>
                     <p>{newsContent}</p>
-                    <button>More...</button>
+                    <button onClick={() => callNavigate(forNavigate)}>More...</button>
                     <div className="cct-ending">
                         <span>{newsDate}</span>
                         <span>by {newsAuthor}</span>

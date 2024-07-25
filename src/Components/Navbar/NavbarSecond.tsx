@@ -17,7 +17,7 @@ const NavbarSecond = ({ elementName }: menuTypeAgain) => {
                 menu.map((e: menuType) => {
                     if (elementName.firstElementName === e.firstElementName && !menuElement.includes(e.secondElementName)) {
                         menuElement = [...menuElement, e.secondElementName];
-                        return <li>
+                        return <li key={e.id}>
                             <img src={e.secondElementCover} alt="" />
                             <NavLink to={''}>{e.secondElementName}</NavLink>
                         </li>
