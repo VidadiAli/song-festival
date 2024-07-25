@@ -29,18 +29,18 @@ const News = () => {
         if (newsContentRef.current) {
             const newsBoxes = newsBoxRefs.current;
             const newsContent = newsContentRef.current;
-            let maxHeightValue: number[] = [], leftValue: number = 20;
+            let maxHeightValue: number[] = [], leftValue: number = 10;
 
             newsBoxes.forEach(newsBox => {
                 if (newsBox) {
-                    newsBox.style.width = `${(newsContent.offsetWidth / itemsToShow) - 40}px`;
+                    newsBox.style.width = `${(newsContent.offsetWidth / itemsToShow) - 20}px`;
                     newsBox.style.left = leftValue + 'px';
                     leftValue += (newsContent.offsetWidth / itemsToShow);
                     maxHeightValue.push(newsBox.offsetHeight);
                 }
             });
 
-            newsContent.style.height = `${Math.max(...maxHeightValue) + 40}px`;
+            newsContent.style.height = `${Math.max(...maxHeightValue) + 20}px`;
         }
     }, [itemsToShow, news]);
 
@@ -54,9 +54,9 @@ const News = () => {
                 newsBoxes.forEach((newsBox, index) => {
                     if (newsBox) {
                         newsBox.style.transition = 'left 0.5s ease-out';
-                        let newPosition = ((index - currentIndex + newsBoxes.length) % newsBoxes.length) * (newsContent.offsetWidth / itemsToShow) + 20 - (newsContent.offsetWidth / itemsToShow);
+                        let newPosition = ((index - currentIndex + newsBoxes.length) % newsBoxes.length) * (newsContent.offsetWidth / itemsToShow) + 10 - (newsContent.offsetWidth / itemsToShow);
                         newsBox.style.left = newPosition + 'px';
-                        if (newsBox.style.left === 20 - (newsContent.offsetWidth / itemsToShow) + 'px') {
+                        if (newsBox.style.left === 10 - (newsContent.offsetWidth / itemsToShow) + 'px') {
                             setTimeout(() => {
                                 newsBox.style.display = 'none';
                             }, 1000);

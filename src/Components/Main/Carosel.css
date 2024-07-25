@@ -225,6 +225,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .carosel>.carosel-content>.carosel-content-text>h1{
+        font-size: 1.5rem;
+    }
     .carosel>.carosel-content>.carosel-content-text>p {
         font-size: 0.8rem;
         height: 45px;
@@ -232,12 +235,15 @@
 
     .carosel>.carosel-content>.carosel-content-text>button {
         padding: 6px 12px;
-        font-size: 1rem;
+        font-size: .85rem;
     }
 
     .carosel>.carosel-content>.carosel-content-right>div {
         width: 50px;
         height: 50px;
+    }
+    .carosel>.carosel-content>.carosel-content-text>.cct-ending>span:nth-child(1) {
+        font-size: .8rem;
     }
 
     .carosel>.carosel-content>.carosel-content-right>div:nth-child(2) {
