@@ -1,10 +1,17 @@
 .one-news {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
+    padding-bottom: 30px;
 }
 
 .one-news>div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.one-news>div>div {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -12,22 +19,22 @@
     border-radius: 0 0 20px 20px;
 }
 
-.one-news>div>img {
+.one-news>div>div>img {
     width: 100%;
     height: auto;
 }
 
-.one-news>div>h2 {
+.one-news>div>div>h2 {
     font-size: 2rem;
     padding: 0 20px;
 }
 
-.one-news>div>p {
+.one-news>div>div>p {
     text-align: justify;
     padding: 0 20px;
 }
 
-.one-news>div>div {
+.one-news>div>div>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,14 +42,14 @@
     padding: 0 20px 20px;
 }
 
-.one-news>div>div>div {
+.one-news>div>div>div>div {
     display: flex;
     align-items: center;
     gap: 5px;
     cursor: pointer;
 }
 
-.one-news>div>div>div>img {
+.one-news>div>div>div>div>img {
     width: 65px;
     height: 65px;
     object-fit: cover;
@@ -51,22 +58,51 @@
     outline: 2px solid lightblue;
 }
 
-.one-news>div>div>div>.user-icon {
+.one-news>div>div>div>div>.user-icon {
     margin-left: 20px;
 }
 
-.one-news>div>div>div>span {
+.one-news>div>div>div>div>span {
     transition: .5s;
 }
 
-.one-news>div>div>div:hover>span {
+.one-news>div>div>div>div:hover>span {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(to left, var(--firstColor), var(--secondColor), var(--firstColor));
 }
 
-.one-news>div>div>span {
+.one-news>div>div>div>span {
     color: gray;
     font-style: italic;
+}
+
+.one-news>.section-by-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.one-news>.section-by-section>div {
+    background-image: linear-gradient(45deg, var(--firstColor), var(--secondColor));
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.one-news>.section-by-section>div>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 4px;
 }

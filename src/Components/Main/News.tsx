@@ -91,7 +91,7 @@ const News = () => {
             </div>
             <div className='news-content' ref={newsContentRef}>
                 {
-                    news.slice().reverse().map((e: newsType, index) => {
+                    news.slice().map((e: newsType, index) => {
                         return (
                             <div
                                 key={index}

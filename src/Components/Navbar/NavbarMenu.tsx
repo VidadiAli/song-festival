@@ -13,6 +13,9 @@ const NavbarMenu = ({ toggle }: toggleTip) => {
 
     return (
         <ul className={`${toggle ? 'toggle-active' : ''}`}>
+            <li>
+                <NavLink to={'/song-festival/'}>Home</NavLink>
+            </li>
             {
                 menu.map((e: menuType) => {
                     if (!menuElement.includes(e.name)) {
@@ -21,12 +24,12 @@ const NavbarMenu = ({ toggle }: toggleTip) => {
                             {
                                 e.firstElementName !== '' ?
                                     <>
-                                        <NavLink to={''}>
+                                        <NavLink to={`/song-festival/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>
                                             {e.name} <HiMiniChevronDown className='chrow-down' />
                                         </NavLink>
                                         <NavbarFirst elementName={e} />
                                     </>
-                                    : <NavLink to={''}>{e.name}</NavLink>
+                                    : <NavLink to={`/song-festival/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>{e.name}</NavLink>
                             }
                         </li>
                     }

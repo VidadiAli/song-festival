@@ -1,0 +1,152 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.about>.about-part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.about>.about-part>h1 {
+    padding: 20px 0;
+}
+
+.about>.about-part>div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.about>.about-part>div>div {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about>.about-part>div>div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+.about>.about-part>div>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: .5s;
+}
+
+.about>.about-part>div>div>img:hover {
+    scale: 1.1;
+}
+
+.about>.about-part>div>p {
+    width: 100%;
+    text-align: justify;
+}
+
+.about>.team-part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about>.team-part>h1 {
+    padding: 10px 0;
+}
+
+.about>.team-part>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about>.team-part>div>div {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(234, 234, 234);
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
+
+.about>.team-part>div>div>img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about>.team-part>div>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.about>.team-part>div>div>div>h4,
+span {
+    text-align: center;
+}
+
+.about>.team-part>div>div>div>h4 {
+    color: var(--secondColor);
+    font-size: 1.5rem;
+}
+
+.about>.team-part>div>div>div>span {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.about>.team-part>div>div>div>p {
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about>.about-part>div {
+        flex-direction: column;
+    }
+
+    .about>.team-part>div {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about>.about-part>h1,
+    .about>.team-part>h1 {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+
+    .about>.team-part>div>div>img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about>.team-part>div>div>div>h4 {
+        font-size: 1.2rem;
+    }
+
+    .about>.team-part>div>div>div>span {
+        font-size: 0.9rem;
+    }
+}

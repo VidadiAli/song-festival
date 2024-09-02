@@ -5,14 +5,6 @@
 
 export const menu: menuType[] = [
     {
-        id: 1,
-        name: "Home",
-        firstElementName: '',
-        firstElementCover: '',
-        secondElementName: '',
-        secondElementCover: '',
-    },
-    {
         id: 2,
         name: "News",
         firstElementName: '',
@@ -91,7 +83,7 @@ export interface menuType {
     name: string,
     firstElementName: string,
     firstElementCover: string,
-    secondElementName: string
+    secondElementName: string,
     secondElementCover: string
 }
 
@@ -101,7 +93,7 @@ export interface menuType {
 
 
 
-export const news: newsType[] = [
+const newsArray: newsType[] = [
     {
         id: 1,
         newsTitle: "Junior Eurovision 2024: All about the Grand Final",
@@ -157,7 +149,44 @@ The independent review gathered feedback from Heads of Delegations, members of t
         newsAuthor: "Edward",
         newsContent: "Those are our two options now that the Swiss broadcaster has whittled down the initial batch of bids to a final two. One of these two cities will host the Eurovision Song Contest in Switzerland in May 2025. The final decision will be made in late August."
     },
+    {
+        id: 7,
+        newsTitle: "Azerbaijan will participate in Eurovision Song Contest 2025",
+        newsCover: "https://thateurovisionsite.com/wp-content/uploads/img_8364-1.jpg",
+        newsDate: "03.08.2024",
+        newsAuthor: "Tanya",
+        newsContent: `İctimai TV has confirmed that Azerbaijan will participate in the Eurovision Song Contest 2025 in Switzerland.
+Azerbaijan has confirmed its participation in the 69th edition of the Eurovision Song Contest. İctimai TV has today opened its song submissions window as the country searches for its next entry for Eurovision.
+Applications are being accepted by September 15 at song@eurovision.az, applications must include the following:
+Song submissions must be in an MP3 192 kbps
+A short biography of the singer and photo, as well as information about the writers and composers of the song
+Songs cannot exceed 3 minutes in length
+Songs must not have been released commercially before September 1, 2024
+İctimai states in the rules that it reserves the rights to make changes or additions to the song that is chosen to represent Azerbaijan. The broadcaster has not detailed how the song will be chosen, since 2015 Azerbaijan has internally selected its song for the competition.
+Fahree and Ilkin Dovlatov represented Azerbaijan at the Eurovision 2024 with “Özünlə apar”. They finished 14th out of 15 entries in Semi-Final One scoring a total of 11 points. This was the second year in a row Azerbaijan failed to qualify for the final.`
+    },
+    {
+        id: 8,
+        newsTitle: "Host City: Basel",
+        newsCover: "https://pix.eurovisionworld.com/pix/eurovision-2025-basel-3_m.jpg",
+        newsDate: "01.09.2024",
+        newsAuthor: "Edward",
+        newsContent: `The host city of the Eurovision Song Contest 2025 will be Basel in Switzerland. The arena will be St. Jakobshalle, and the dates have also been confirmed: 13, 15 and 17 May 2025.
+        Swiss Broadcasting Corporation SRG SSR and the EBU (European Broadcasting Union) have just revealed that the 69th edition of our beloved contest will be held in Basel, Switzerland. The contest will take place in St. Jakobshalle`
+    },
+    {
+        id: 9,
+        newsTitle: "Cyprus: Theo Evan to Eurovision 2025",
+        newsCover: "https://pix.eurovisionworld.com/pix/cyprus-2025-theo-evan.jpg",
+        newsDate: "02.09.2024",
+        newsAuthor: "Lena",
+        newsContent: `Cypriot broadcaster has just revealed their artist to compete at the Eurovision Song Contest 2025 in Basel: Theo Evan. His song will be released at a later date
+        The first artist for Eurovision 2025 has just been announced: Theo Evan.
+The Evan was internally selected by the Cypriot broadcaster CyBC as their representative in the Eurovision Song Contest in Basel next May.`
+    }
 ]
+export const news: newsType[] = newsArray.reverse();
+
 
 export interface newsType {
     id: Number,

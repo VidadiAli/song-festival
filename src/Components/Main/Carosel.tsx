@@ -19,22 +19,14 @@ const Carosel = () => {
 
     useEffect(() => {
         const reverseArray = () => {
-            let filteredImages = [], forReverse = [];
-            forReverse = news.reverse();
-            for (let i = 0; i < 5; i++) {
-                filteredImages.push(forReverse[i])
-            }
+            let filteredImages = [];
+            filteredImages = news.slice(0, 5);
             setImageArray(filteredImages);
             if (filteredImages.length > 0) {
                 updateCarosel(filteredImages, 0); // İlk render zamanı imageArray və imageCounter-i birbaşa yeniləyirik
             }
         }
-
         reverseArray();
-
-        window.addEventListener('focus', reverseArray);
-
-        return () => window.removeEventListener('focus', reverseArray)
     }, []);
 
     const updateCarosel = (imageArray: newsType[], imageCounter: number) => {

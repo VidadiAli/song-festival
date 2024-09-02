@@ -3,6 +3,7 @@ import NavbarMenu from "./NavbarMenu";
 import './Navbar.css'
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -19,9 +20,9 @@ const Navbar = () => {
                 {
                     window.innerWidth <= 992 ? <RiMenu3Fill className="menu-icon" onClick={toggleProses} /> : ''
                 }
-                <a href="index.html" className='logo'>
+                <NavLink to={'/song-festival/'} className='logo'>
                     <span>SF</span>
-                </a>
+                </NavLink>
                 <NavbarMenu toggle={toggle} />
             </div>
 

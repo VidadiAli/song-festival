@@ -4,6 +4,7 @@ import Main from './Components/Main/Main'
 import Navbar from './Components/Navbar/Navbar'
 import OneNews from './Components/Main/OneNews'
 import AllNews from './Components/Main/AllNews'
+import About from './Components/About/About'
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
         <Route path='/song-festival/' element={<Main />} />
         <Route path='/song-festival/:navigateUrl' element={<OneNews />} />
         <Route path='/song-festival/all-news' element={<AllNews />} />
+        <Route path='/song-festival/news' element={<AllNews />} />
+        <Route path='/song-festival/about-us' element={<About />} />
       </Routes>
     </div>
   )
