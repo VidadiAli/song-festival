@@ -3,7 +3,7 @@ import './About.css'
 
 const About = () => {
     return (
-        <div className="content-width about">
+        <div className="content-width about" id='up'>
             <div className="about-part">
                 <h1>Who We Are?</h1>
                 <div>
@@ -18,7 +18,7 @@ const About = () => {
                 <h1>Our Team</h1>
                 <div>
                     {
-                        team.map((e: teamType)=>{
+                        team.map((e: teamType) => {
                             return <div key={e.id}>
                                 <img src={e.cover} alt="" />
                                 <div>

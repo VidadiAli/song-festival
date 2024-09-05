@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import OneNews from './Components/Main/OneNews'
 import AllNews from './Components/Main/AllNews'
 import About from './Components/About/About'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/song-festival/news' element={<AllNews />} />
         <Route path='/song-festival/about-us' element={<About />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
