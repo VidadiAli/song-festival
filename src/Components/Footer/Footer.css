@@ -61,11 +61,21 @@ textarea {
 }
 
 @media(max-width: 600px) {
+
+    .footer {
+        padding: 30px 10px;
+    }
+
     .footer>div {
         gap: 40px;
     }
 
     .footer>div>div {
+        width: 100%;
+    }
+
+    .footer>div>div>form>label>input,
+    textarea {
         width: 100%;
     }
 }
