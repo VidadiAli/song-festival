@@ -22,12 +22,12 @@ const NavbarFirst = ({ elementName }: menuTypeAgain) => {
                             {
                                 e.secondElementName !== '' ?
                                     <>
-                                        <NavLink to={`/song-festival/${e.firstElementName}`}>
+                                        <NavLink to={`/${e.firstElementName}`}>
                                             {e.firstElementName} <HiMiniChevronDown className='chrow-down' />
                                         </NavLink>
                                         <NavbarSecond elementName={e} />
                                     </>
-                                    : <NavLink to={`/song-festival/${e.firstElementName}`}>{e.firstElementName}</NavLink>
+                                    : <NavLink to={`/${e.firstElementName}`}>{e.firstElementName}</NavLink>
                             }
                         </li>
                     }

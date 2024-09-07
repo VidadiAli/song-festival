@@ -19,7 +19,7 @@ const NavbarSecond = ({ elementName }: menuTypeAgain) => {
                         menuElement = [...menuElement, e.secondElementName];
                         return <li key={e.id}>
                             <img src={e.secondElementCover} alt="" />
-                            <NavLink to={`/song-festival/${e.secondElementName}`}>{e.secondElementName}</NavLink>
+                            <NavLink to={`/${e.secondElementName}`}>{e.secondElementName}</NavLink>
                         </li>
                     }
                 })

@@ -24,12 +24,12 @@ const NavbarMenu = ({ toggle }: toggleTip) => {
                             {
                                 e.firstElementName !== '' ?
                                     <>
-                                        <NavLink to={`/song-festival/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>
+                                        <NavLink to={`/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>
                                             {e.name} <HiMiniChevronDown className='chrow-down' />
                                         </NavLink>
                                         <NavbarFirst elementName={e} />
                                     </>
-                                    : <NavLink to={`/song-festival/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>{e.name}</NavLink>
+                                    : <NavLink to={`/${e.name.toLocaleLowerCase().split(' ').join('-')}`}>{e.name}</NavLink>
                             }
                         </li>
                     }

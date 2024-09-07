@@ -79,7 +79,7 @@ const News = () => {
     const navigate = useNavigate();
 
     const callNavigate = (navigateUrl: string) => {
-        navigate(`/song-festival/${navigateUrl}`);
+        navigate(`/${navigateUrl}`);
     }
 
 
