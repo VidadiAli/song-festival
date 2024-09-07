@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='main-element'>
       <Navbar />
-      <Routes basename="/song-festival">
+      <Routes >
         <Route path='/song-festival/' element={<Main />} />
         <Route path='/song-festival/:navigateUrl' element={<OneNews />} />
         <Route path='/song-festival/all-news' element={<AllNews />} />
