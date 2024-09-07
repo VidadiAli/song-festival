@@ -20,7 +20,7 @@ const Navbar = () => {
                 {
                     window.innerWidth <= 992 ? <RiMenu3Fill className="menu-icon" onClick={toggleProses} /> : ''
                 }
-                <NavLink to={'/'} className='logo'>
+                <NavLink to={'/song-festival/'} className='logo'>
                     <span>SF</span>
                 </NavLink>
                 <NavbarMenu toggle={toggle} />

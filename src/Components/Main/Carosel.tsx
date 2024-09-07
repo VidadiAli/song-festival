@@ -102,7 +102,7 @@ const Carosel = () => {
     const navigate = useNavigate();
 
     const callNavigate = (navigateUrl: string) => {
-        navigate(`/${navigateUrl}`);
+        navigate(`/song-festival/${navigateUrl}`);
     }
 
     return (

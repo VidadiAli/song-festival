@@ -12,12 +12,12 @@ function App() {
   return (
     <div className='main-element'>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/:navigateUrl' element={<OneNews />} />
-        <Route path='/all-news' element={<AllNews />} />
-        <Route path='/news' element={<AllNews />} />
-        <Route path='/about-us' element={<About />} />
+      <Routes basename="/song-festival">
+        <Route path='/song-festival/' element={<Main />} />
+        <Route path='/song-festival/:navigateUrl' element={<OneNews />} />
+        <Route path='/song-festival/all-news' element={<AllNews />} />
+        <Route path='/song-festival/news' element={<AllNews />} />
+        <Route path='/song-festival/about-us' element={<About />} />
       </Routes>
       <Footer />
     </div>
